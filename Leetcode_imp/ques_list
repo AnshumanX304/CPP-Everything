@@ -1,0 +1,78 @@
+
+Miscllaneous-: 
+
+2905. Find Indices With Index and Value Difference II (prefix max and prefix min concept used)
+2906. Construct Product Matrix (prefix and postfix product concept used)
+1361. Validate Binary Tree Nodes (https://leetcode.com/problems/validate-binary-tree-nodes/description/?envType=daily-question&envId=2023-10-17)
+1424. Diagonal Traverse II (used bfs efficiently) (https://leetcode.com/problems/diagonal-traverse-ii/description/?envType=daily-question&envId=2023-11-22)
+560. Subarray Sum Equals K (Important technique for better use of prefix sums ) (https://leetcode.com/problems/subarray-sum-equals-k/description/)
+76. Minimum Window Substring (https://leetcode.com/problems/minimum-window-substring/description/) (important Sliding window/two pointer question).
+
+
+
+DP-:
+
+22. Generate Parentheses (https://leetcode.com/problems/generate-parentheses/description/)  (DP)
+1048. Longest String Chain (uses concept of LIS)  (DP)
+1277. Count Square Submatrices with All Ones (DP) (https://leetcode.com/problems/count-square-submatrices-with-all-ones/description/)
+
+1425. (constrained subsequence sum) https://leetcode.com/problems/constrained-subsequence-sum/description/ (https://leetcode.com/problems/constrained-subsequence-sum/description/)   (DP Very different question)-> even after dp, optimisation was required.
+        --This question was similar to LIS but here we kept track of maximum sum the last k elements have to offer for which 
+        we used priority queue as dp solution gave tle.
+
+
+174. Dungeon Game (https://leetcode.com/problems/dungeon-game/description/?envType=list&envId=55ac4kuc)
+    --very clear thinking of backtracking
+
+221. Maximal Square(https://leetcode.com/problems/maximal-square/description/?envType=list&envId=55ac4kuc)
+    --Very good question we calculated maximum possible side of largest possible square, don't think in terms of area
+    think in terms of sides.
+
+650. 2 Keys Keyboard (https://leetcode.com/problems/2-keys-keyboard/)
+    --Extremely important question to know the value of edge cases
+
+790. Domino and Tromino Tiling(https://leetcode.com/problems/domino-and-tromino-tiling/description/)
+(not a very difficult question based on pattern formation from previous states)--->made me realise recursion is basically seeing patterns in problems.
+
+
+801. Minimum Swaps To Make Sequences Increasing (https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/) (pick not pick type ques but with good implementation)
+
+673. Number of Longest Increasing Subsequence (https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing/description/)   (Very important for understanding the importance of dp table)
+
+546. Remove Boxes (https://leetcode.com/problems/remove-boxes/description/) 
+Excellent dp questions to feel the real dp aura
+
+
+
+
+GRAPH-:
+
+1368. Minimum Cost to Make at Least One Valid Path in a Grid (https://leetcode.com/problems/minimum-cost-to-make-at-least-one-valid-path-in-a-grid/description/)
+--Applied dijkastras algo on 2D grid.
+
+----------------//GRAPH/TREE/DP Rerooting-------------------(IMPORTANT FOR CP AS WELL)
+834. Sum of Distances in Tree (uses concept of dp/tree/graph re-rooting)  (https://leetcode.com/problems/sum-of-distances-in-tree/description/)
+//this concept is applied when we need to shift the root of the tree to other nodes of the tree to get an
+//answer that matches the given operations for each node
+//IN THIS WE CALCULATE VALUES FOR EACH NODE CONSIDERING ONE NODE AS ROOT IN THE BEGINNING AND THEN WE GRADUALLY FIND
+//PATTERNS WHEN THE ROOT IS CHANGED TO ADJACENT NODE AND THEN CALCULATE THE REST ANSWERS ACCORDINGLY
+
+A. Learning Languages (https://codeforces.com/problemset/problem/277/A)
+->Important codeforces question for understanding real world implementation of connected components (can also be solved usinf dsu)
+
+
+1> Must do for understanding dijkastra's algorithm completely (https://leetcode.com/problems/second-minimum-time-to-reach-destination/description/?envType=daily-question&envId=2024-07-28)
+
+
+
+
+
+
+
+
+    
+
+
+
+
+

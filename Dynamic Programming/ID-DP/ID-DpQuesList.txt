@@ -1,0 +1,16 @@
+Decode Ways-: https://leetcode.com/problems/decode-ways/description/?envType=list&envId=50vlu3z5
+Perfect Square-: https://leetcode.com/problems/perfect-squares/description/?envType=list&envId=50vlu3z5
+Coin Change-: https://leetcode.com/problems/coin-change/?envType=list&envId=50vlu3z5
+
+
+** while working on perfect square and coin change i saw somethimg-:
+    1>  While working with arrays treat the edge case e.g. if(nums==0) && if(nums<0) differently
+        for if(nums==0)return 0; && for if(nums<0)return INT_MAX; handle the INT_MAX case after the function call.
+
+    2>  But for normal loops like in perfect square first leetcode submission we can treat them as one like if(nums<=0)
+        See both questions to understand the context of the shit i have written hare :).
+
+Counting Bits-: https://leetcode.com/problems/counting-bits/?envType=list&envId=50vlu3z5
+
+** Integer Break-: https://leetcode.com/problems/integer-break/description/?envType=list&envId=50vlu3z5
+

@@ -1,0 +1,30 @@
+1. The main idea of this topic is based on the concept of matching and not matching 
+2. When the given string value will match then we will move pointers of both strings one index back
+3. When they won't match then we will simply try taking max of the answer obtained by moving one index back 
+   from each string one by one 
+
+                    abc     adc           a and a equal so move both pointers by one back
+                    |       |
+
+                    abc      adc          now b and d are different so move one pointer 
+                     |        |           back for both one by one in next step
+
+
+
+abc       adc                        abc      adc          yeah boy just like this !!
+  |        |                          |         |
+
+* here d pointer                    * here b pointer
+is kept same and                    is kept same and 
+pointer on b is                     pointer on d is 
+moved.                              moved.
+
+
+4. All the further steps will be carried out in similar fashion
+
+
+
+IMP-> In tabulation approach we do index shifting in dp array so for getting 
+    values from string we will use one index less (see the code nigga !!)
+
+

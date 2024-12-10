@@ -1,0 +1,834 @@
+AST for rule1:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": "<",
+          "right": "25"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "salary",
+        "operator": ">",
+        "right": "50000"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "experience",
+        "operator": ">",
+        "right": "5"
+      },
+      "left": null,
+      "right": null
+    }
+  }
+}
+AST for rule2:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "age",
+        "operator": ">",
+        "right": "30"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "department",
+        "operator": "=",
+        "right": "'Marketing'"
+      },
+      "left": null,
+      "right": null
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "salary",
+        "operator": ">",
+        "right": "20000"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "experience",
+        "operator": ">",
+        "right": "5"
+      },
+      "left": null,
+      "right": null
+    }
+  }
+}
+Combined AST:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": ">",
+            "right": "30"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": "<",
+            "right": "25"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "50000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "20000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  }
+}
+AST JSON for combined_rules.json:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": ">",
+            "right": "30"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": "<",
+            "right": "25"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "50000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "20000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  }
+}
+Evaluation result: true
+
+Data Storage Recommendation:
+For storing rules and application metadata, a document-based NoSQL database like MongoDB would be suitable.
+Sample MongoDB Schema:
+
+  {
+    "_id": ObjectId("..."),
+    "name": "Combined Sales and Marketing Rule",
+    "description": "Eligibility rule for sales and marketing departments",
+    "createdAt": ISODate("2024-10-17T..."),
+    "updatedAt": ISODate("2024-10-17T..."),
+    "ast": {
+      // The entire AST structure as JSON
+    }
+  }
+  
+anshumantiwari21153045gmail.com@Anshumans-MacBook-Air Codevscode % node "/Users/anshumantiwari21153045gmail.com/Documents/Codevscode/cp/my.js"
+AST for rule1:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": "<",
+          "right": "25"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "salary",
+        "operator": ">",
+        "right": "50000"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "experience",
+        "operator": ">",
+        "right": "5"
+      },
+      "left": null,
+      "right": null
+    }
+  }
+}
+AST for rule2:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "age",
+        "operator": ">",
+        "right": "30"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "department",
+        "operator": "=",
+        "right": "'Marketing'"
+      },
+      "left": null,
+      "right": null
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "OR",
+    "left": {
+      "type": "operand",
+      "value": {
+        "left": "salary",
+        "operator": ">",
+        "right": "20000"
+      },
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "operand",
+      "value": {
+        "left": "experience",
+        "operator": ">",
+        "right": "5"
+      },
+      "left": null,
+      "right": null
+    }
+  }
+}
+Combined AST:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": ">",
+            "right": "30"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": "<",
+            "right": "25"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "50000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "20000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  }
+}
+AST JSON for combined_rules.json:
+{
+  "type": "operator",
+  "value": "AND",
+  "left": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": ">",
+            "right": "30"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "type": "operator",
+        "value": "AND",
+        "left": {
+          "type": "operand",
+          "value": {
+            "left": "age",
+            "operator": "<",
+            "right": "25"
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "operand",
+          "value": {
+            "left": "department",
+            "operator": "=",
+            "right": "'Marketing'"
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "50000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  "right": {
+    "type": "operator",
+    "value": "AND",
+    "left": {
+      "type": "operator",
+      "value": "AND",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "age",
+          "operator": ">",
+          "right": "30"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "department",
+          "operator": "=",
+          "right": "'Marketing'"
+        },
+        "left": null,
+        "right": null
+      }
+    },
+    "right": {
+      "type": "operator",
+      "value": "OR",
+      "left": {
+        "type": "operand",
+        "value": {
+          "left": "salary",
+          "operator": ">",
+          "right": "20000"
+        },
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "operand",
+        "value": {
+          "left": "experience",
+          "operator": ">",
+          "right": "5"
+        },
+        "left": null,
+        "right": null
+      }
+    }
+  }
+}

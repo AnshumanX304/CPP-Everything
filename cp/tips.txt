@@ -1,0 +1,18 @@
+*If there is a regularly increasing or decreasing index or paramater in a 2d or 3d dp we can convert it to 1d/2d dp 
+by taking an extra loop to cater that paramater inside the recursive function for recursive+memoisation approach and inside 
+parent loop for tabulation approach.
+
+
+* For any dp problem always look for these 4 aspects-:
+    1.states
+    2.transition
+    3.base case
+    4.final subproblem
+
+* Cumulative sum is an important technique to solve questions related to range 
+->https://codeforces.com/contest/816/problem/B (look onto this question for reference)
+->https://www.youtube.com/watch?v=96RG7EBF8LI(reference video for range update /cumulative sum)
+
+
+
+
