@@ -5,6 +5,15 @@
 //By boundries seen we mean that the r-l+1 length substring starting from index l has matched the same 
 //length from beginning of the string i.r from index 0. (s[l].....s[r])==(s[0].....s[r-l])
 
+//Agar i jo hum calculate karne jaa rhe hain wo dayare ke bahar hai to hum use dayara bana lege aur dayara 
+//badhane ki koshish karenge jab tak badha sakte hain tab tak
+
+//Agar i pehle se hi dayare ke bhitar hai iska matlab uska bhavishya pehle hi likha jaa chuka ha 
+//hum uske kal se uska bhavishya pata lagayenge 
+//agar uska bhavishya sema ke andar hai to aachi baat hai kuch nahi karna hoga 
+//lekin agar uska bhavishya dayara kood jaaye to hume dayara badhane ka prayas karna hoga jab tak badh paaye 
+//nhi to jo bhi hoga wahi hoga z[i] ki kimat
+
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
