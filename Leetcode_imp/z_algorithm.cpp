@@ -42,17 +42,17 @@ int main(){
             r=k-1;  
         }
         else{
-            int k = i - l;
-            if (zarray[k] < r - i + 1) {
-                zarray[i] = zarray[k];
-            } else {
-                int j = r - i + 1;
-                while (r + 1 < n && s[j] == s[r + 1]) {
-                    j++;
+            if(i+zvalue[i-l]-1>=r){
+                int j=r-i+1;
+                while(r+1<n && comb[j]==comb[r+1]){
                     r++;
+                    j++;
                 }
-                zarray[i] = r - i + 1;
-                l = i;
+                zvalue[i]=r-i+1;
+                l=i;
+            }
+            else{
+                zvalue[i]=zvalue[i-l];
             }
         }
     }
