@@ -4,12 +4,17 @@ class disjointSet{
     private:
     vector<int> rank;
     vector<int> parent;
+    vector<int> size;
     public:
     disjointSet(int n){
         rank.resize(n+1,0);
         parent.resize(n+1);
+        size.resize(n+1);
         for(int i=0;i<=n;i++){
             parent[i]=i;
+        }
+        for(int i=0;i<=n;i++){
+            parent[i]=1;
         }
     }
 
@@ -39,6 +44,22 @@ class disjointSet{
             parent[p_node2]=p_node1;
             rank[p_node1]++;
         }
+    }
+
+    void unionBySize(int node1, int node2){
+        int p_node1=findUParent(node1);
+        int p_node2=findUParent(node2);
+        if(p_node1==p_node2)return;
+
+        if(size[p_node2]<size[p_node1]){
+            parent[p_node2]=p_node1;
+            size[p_node1]+=size[p_node2];
+        }
+        else{
+            parent[p_node1]=p_node2;
+            size[p_node2]+=size[p_node1];
+        }
+
     }
 
 };
