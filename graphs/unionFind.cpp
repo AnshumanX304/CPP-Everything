@@ -5,17 +5,20 @@ class disjointSet{
     vector<int> rank;
     vector<int> parent;
     vector<int> size;
+    int comp;
     public:
     disjointSet(int n){
         rank.resize(n+1,0);
         parent.resize(n+1);
         size.resize(n+1);
+        
         for(int i=0;i<=n;i++){
             parent[i]=i;
         }
         for(int i=0;i<=n;i++){
             parent[i]=1;
         }
+        this->comp=n;
     }
 
     int findUParent(int node){
@@ -44,6 +47,7 @@ class disjointSet{
             parent[p_node2]=p_node1;
             rank[p_node1]++;
         }
+        comp--;
     }
 
     void unionBySize(int node1, int node2){
@@ -60,6 +64,10 @@ class disjointSet{
             size[p_node2]+=size[p_node1];
         }
 
+    }
+
+    int get_comp(){
+        return this->comp;
     }
 
 };
