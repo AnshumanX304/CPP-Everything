@@ -15,9 +15,7 @@ class disjointSet{
         for(int i=0;i<=n;i++){
             parent[i]=i;
         }
-        for(int i=0;i<=n;i++){
-            parent[i]=1;
-        }
+
         this->comp=n;
     }
 
