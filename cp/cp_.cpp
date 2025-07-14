@@ -165,11 +165,12 @@ class SegmentTree{
 // compute nCr % p
 /* Iterative Function to calculate (x^y)%p
 in O(log y) */
+
+//Intution-: square the base and halve the exponent
 unsigned long long power(unsigned long long x, 
                                   int y, int p)
 {
     unsigned long long res = 1; // Initialize result
- 
     x = x % p; // Update x if it is more than or
     // equal to p
  
@@ -181,8 +182,8 @@ unsigned long long power(unsigned long long x,
             res = (res * x) % p;
  
         // y must be even now
-        y = y >> 1; // y = y/2
         x = (x * x) % p;
+        y = y >> 1; // y = y/2
     }
     return res;
 }
